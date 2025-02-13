@@ -35,7 +35,70 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
+<style>
+  .box {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
 
+  .gold-price-box, .price-box {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    border-radius: 0 0 15px 15px;
+  }
+
+  .gold-price-box {
+    background-color: #FFC107;
+    padding: 15px 0;
+    bottom: -10px;
+  }
+
+  .gold-price, .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+  }
+
+  .price-box {
+  background-color: #FFCCE5;
+  padding: 0px 0 5px 0; /* Further reduced height */
+  bottom: 0;
+}
+
+
+  .price {
+    color: #D0021B;
+    margin-top: 15px;
+  }
+
+  .coin-image {
+    width: 40px;
+    margin-bottom: 10px;
+  }
+
+  .number {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+  }
+
+  .coins {
+    font-size: 16px;
+    color: gray;
+  }
+
+
+  .box {
+    padding-top: 25px;
+    position: relative;
+  }
+</style>
 <body class="index-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
@@ -98,6 +161,73 @@
       </svg>
 
     </section><!-- /Hero Section -->
+    
+  <div class="container py-5">
+    <div class="row g-4">
+
+      <!-- Box 1 -->
+      <div class="col-lg-3 col-md-4 col-sm-6 col-4">
+        <div class="box">
+          <!-- <img src="assets/img/coin.png" alt="Coin" class="coin-image"> -->
+          <p><strong>1 Day</strong></p>
+          <p>Validity</p>
+          <br><br>
+          <div class="gold-price-box">
+            <p class="gold-price">₹49</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Box 2 -->
+      <div class="col-lg-3 col-md-4 col-sm-6 col-4">
+        <div class="box">
+          <p><strong>3 Day</strong></p>
+          <p>Validity</p>
+          <br><br>
+          <div class="price-box">
+            <p class="price">₹99</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Box 3 -->
+      <div class="col-lg-3 col-md-4 col-sm-6 col-4">
+        <div class="box">
+          <p><strong>7 Day</strong></p>
+          <p>Validity</p>
+          <br><br>
+          <div class="price-box">
+            <p class="price">₹199</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Box 4 (Popular) -->
+      <div class="col-lg-3 col-md-4 col-sm-6 col-4">
+        <div class="box">
+          <p><strong>30 Day</strong></p>
+          <p>Validity</p>
+          <br><br>
+          <div class="price-box">
+            <p class="price">₹499</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Box 5 -->
+      <div class="col-lg-3 col-md-4 col-sm-6 col-4">
+        <div class="box">
+          <p><strong>3 Month</strong></p>
+          <p>Validity</p>
+          <br><br>
+          <div class="price-box">
+            <p class="price">₹999</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
 
     <!-- Stats Section -->
