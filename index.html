@@ -168,20 +168,20 @@
     <div class="row g-4">
 
       <!-- Box 1 -->
-      <div class="col-lg-3 col-md-4 col-sm-6 col-4" id="payButton">
+      <div class="col-lg-3 col-md-4 col-sm-6 col-4 payButton">
         <div class="box">
-          <!-- <img src="assets/img/coin.png" alt="Coin" class="coin-image"> -->
-          <p><strong>1 Day</strong></p>
-          <p>Validity</p>
-          <br><br>
-          <div class="gold-price-box">
-            <p class="gold-price">₹49</p>
-          </div>
+            <p><strong>1 Day</strong></p>
+            <p>Validity</p>
+            <br><br>
+            <div class="price-box">
+              <p class="price">₹49</p>
+            </div>
         </div>
-      </div>
+    </div>
+    
 
       <!-- Box 2 -->
-      <div class="col-lg-3 col-md-4 col-sm-6 col-4">
+      <div class="col-lg-3 col-md-4 col-sm-6 col-4 payButton">
         <div class="box">
           <p><strong>3 Days</strong></p>
           <p>Validity</p>
@@ -193,7 +193,7 @@
       </div>
 
       <!-- Box 3 -->
-      <div class="col-lg-3 col-md-4 col-sm-6 col-4">
+      <div class="col-lg-3 col-md-4 col-sm-6 col-4 payButton">
         <div class="box">
           <p><strong>7 Days</strong></p>
           <p>Validity</p>
@@ -205,7 +205,7 @@
       </div>
 
       <!-- Box 4 (Popular) -->
-      <div class="col-lg-3 col-md-4 col-sm-6 col-4">
+      <div class="col-lg-3 col-md-4 col-sm-6 col-4 payButton">
         <div class="box">
           <p><strong>30 Days</strong></p>
           <p>Validity</p>
@@ -217,7 +217,7 @@
       </div>
 
       <!-- Box 5 -->
-      <div class="col-lg-3 col-md-4 col-sm-6 col-4">
+      <div class="col-lg-3 col-md-4 col-sm-6 col-4 payButton">
         <div class="box">
           <p><strong>3 Month</strong></p>
           <p>Validity</p>
@@ -417,32 +417,35 @@
   <!-- Preloader -->
   <div id="preloader"></div>
   <script>
-    document.getElementById('payButton').addEventListener('click', function () {
-        var options = {
-            "key": "rzp_live_3zt6jpOxJUSrfO", // Replace with your Razorpay API Key
-            "amount": 1000, // Amount in paise (₹499.00)
-            "currency": "INR",
-            "name": "Hi ma",
-            "description": "Subscription Payment",
-            "image": "assets/img/logo.png", // Your logo URL
-            "handler": function (response) {
-                alert("Payment Successful! Payment ID: " + response.razorpay_payment_id);
-                // Send response.razorpay_payment_id to your backend for verification
-            },
-            "prefill": {
-                "name": "Jaya Prasad",
-                "email": "himaapp123@gmail.com",
-                "contact": "8939580642"
-            },
-            "theme": {
-                "color": "#FFC107"
-            }
-        };
-        var rzp1 = new Razorpay(options);
-        rzp1.open();
+    document.querySelectorAll('.payButton').forEach(button => {
+        button.addEventListener('click', function () {
+            let priceText = this.querySelector('.gold-price, .price').innerText.replace('₹', '').trim();
+            let amountInPaisa = parseInt(priceText) * 100; // Convert ₹ to paise
+
+            var options = {
+                "key": "rzp_live_3zt6jpOxJUSrfO", // Replace with your Razorpay API Key
+                "amount": amountInPaisa, 
+                "currency": "INR",
+                "name": "Hi ma",
+                "description": "Subscription Payment",
+                "image": "assets/img/logo.png",
+                "handler": function (response) {
+                    alert("Payment Successful! Payment ID: " + response.razorpay_payment_id);
+                },
+                "prefill": {
+                    "name": "Jaya Prasad",
+                    "email": "himaapp123@gmail.com",
+                    "contact": "8939580642"
+                },
+                "theme": {
+                    "color": "#FFC107"
+                }
+            };
+            var rzp1 = new Razorpay(options);
+            rzp1.open();
+        });
     });
-  </script>
-  
+</script>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
