@@ -26,6 +26,7 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  
 
   <!-- =======================================================
   * Template Name: Hi ma
@@ -161,12 +162,13 @@
       </svg>
 
     </section><!-- /Hero Section -->
+
     
   <div class="container py-5">
     <div class="row g-4">
 
       <!-- Box 1 -->
-      <div class="col-lg-3 col-md-4 col-sm-6 col-4">
+      <div class="col-lg-3 col-md-4 col-sm-6 col-4" id="payButton">
         <div class="box">
           <!-- <img src="assets/img/coin.png" alt="Coin" class="coin-image"> -->
           <p><strong>1 Day</strong></p>
@@ -414,6 +416,33 @@
 
   <!-- Preloader -->
   <div id="preloader"></div>
+  <script>
+    document.getElementById('payButton').addEventListener('click', function () {
+        var options = {
+            "key": "rzp_live_3zt6jpOxJUSrfO", // Replace with your Razorpay API Key
+            "amount": 1000, // Amount in paise (₹499.00)
+            "currency": "INR",
+            "name": "Hi ma",
+            "description": "Subscription Payment",
+            "image": "assets/img/logo.png", // Your logo URL
+            "handler": function (response) {
+                alert("Payment Successful! Payment ID: " + response.razorpay_payment_id);
+                // Send response.razorpay_payment_id to your backend for verification
+            },
+            "prefill": {
+                "name": "Jaya Prasad",
+                "email": "himaapp123@gmail.com",
+                "contact": "8939580642"
+            },
+            "theme": {
+                "color": "#FFC107"
+            }
+        };
+        var rzp1 = new Razorpay(options);
+        rzp1.open();
+    });
+  </script>
+  
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -422,6 +451,8 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
