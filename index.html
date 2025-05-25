@@ -4,111 +4,105 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - Hi ma Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>Salad Shop - Fresh, Healthy & Tasty</title>
+  <meta name="description" content="Order delicious and healthy salads made with farm-fresh ingredients. Delivered straight to your doorstep.">
+  <meta name="keywords" content="salad, healthy food, organic salad, quinoa, fruit salad, greek salad">
+  
+  <link href="assets/img/salad-logo.png" rel="icon">
+  <link href="assets/img/salad-logo.png" rel="apple-touch-icon">
+  
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Poppins&family=Raleway&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-  
 
-  <!-- =======================================================
-  * Template Name: Hi ma
-  * Template URL: https://bootstrapmade.com/Hi ma-free-bootstrap-landing-page-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    body {
+      background-color: #f0fff4;
+      font-family: 'Poppins', sans-serif;
+    }
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('https://images.unsplash.com/photo-1602526216434-3e4b27c3bbfa?auto=format&fit=crop&w=1920&q=80') center center no-repeat;
+      background-size: cover;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 700;
+      color: #14532d;
+    }
+    .hero p {
+      font-size: 20px;
+      margin-top: 15px;
+      color: #14532d;
+    }
+    .btn-success {
+      background-color: #28a745;
+      border-color: #28a745;
+    }
+    .btn-success:hover {
+      background-color: #218838;
+    }
+    .box {
+      background: #ffffff;
+      border: 2px solid #cde0c2;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .price-box {
+      background-color: #e6f4ea;
+      border-radius: 10px;
+      padding: 10px 0;
+    }
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #28a745;
+    }
+    .footer {
+      background-color: #e6f4ea;
+    }
+    header.header {
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      z-index: 9999;
+    }
+    header .sitename {
+      color: #28a745;
+    }
+    .navmenu ul li a {
+      color: #333;
+      font-weight: 500;
+    }
+    .navmenu ul li a.active, .navmenu ul li a:hover {
+      color: #28a745;
+    }
+  </style>
 </head>
-<style>
-  .box {
-    background-color: white;
-    border-radius: 15px;
-    padding: 20px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
 
-  .gold-price-box, .price-box {
-    width: 100%;
-    position: absolute;
-    left: 0;
-    border-radius: 0 0 15px 15px;
-  }
-
-  .gold-price-box {
-    background-color: #FFC107;
-    padding: 15px 0;
-    bottom: -10px;
-  }
-
-  .gold-price, .price {
-    font-size: 18px;
-    font-weight: bold;
-    color: black;
-  }
-
-  .price-box {
-  background-color: #FFCCE5;
-  padding: 0px 0 5px 0; /* Further reduced height */
-  bottom: 0;
-}
-
-
-  .price {
-    color: #D0021B;
-    margin-top: 15px;
-  }
-
-  .coin-image {
-    width: 40px;
-    margin-bottom: 10px;
-  }
-
-  .number {
-    font-size: 24px;
-    font-weight: bold;
-    color: black;
-  }
-
-  .coins {
-    font-size: 16px;
-    color: gray;
-  }
-
-
-  .box {
-    padding-top: 25px;
-    position: relative;
-  }
-</style>
 <body class="index-page">
-
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <div class="position-absolute top-0 start-0 p-3">
+        <h4 class="fw-bold text-success m-0"><i class="bi bi-basket2-fill me-1"></i>Salad Shop</h4>
 
+      </div>
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Hi ma</h1>
+        <h1 class="sitename">Salad Shop</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -123,343 +117,133 @@
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
     </div>
   </header>
 
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-      <img src="assets/img/hero-bg-2.jpg" alt="" class="hero-bg">
-
-      <div class="container">
-        <div class="row gy-4 justify-content-between">
-          <div class="col-lg-4 order-lg-last hero-img" data-aos="zoom-out" data-aos-delay="100">
-            <img src="assets/img/f.png" class="img-fluid animated" alt="">
-          </div>
-
-          <div class="col-lg-6  d-flex flex-column justify-content-center" data-aos="fade-in">
-            <h1>Speak with Expert</h1>
-          </div>
-
-        </div>
-      </div>
-
-      <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
-        <defs>
-          <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
-        </defs>
-        <g class="wave1">
-          <use xlink:href="#wave-path" x="50" y="3"></use>
-        </g>
-        <g class="wave2">
-          <use xlink:href="#wave-path" x="50" y="0"></use>
-        </g>
-        <g class="wave3">
-          <use xlink:href="#wave-path" x="50" y="9"></use>
-        </g>
-      </svg>
-
-    </section><!-- /Hero Section -->
-
-    
-  <div class="container py-5">
-    <div class="row g-4">
-
-      <!-- Box 1 -->
-      <div class="col-lg-3 col-md-4 col-sm-6 col-4 payButton">
-        <div class="box">
-            <p><strong>1 Day</strong></p>
-            <p>Validity</p>
-            <br><br>
-            <div class="price-box">
-              <p class="price">₹49</p>
-            </div>
-        </div>
+  <section id="hero" class="hero">
+    <div class="container">
+      <h1>Welcome to Salad Shop</h1>
+      <p>Healthy, Organic & Delicious Salads – Freshly Made for You!</p>
+      <a href="#products" class="btn btn-success mt-4">Explore Products</a>
     </div>
-    
+  </section>
 
-      <!-- Box 2 -->
-      <div class="col-lg-3 col-md-4 col-sm-6 col-4 payButton">
-        <div class="box">
-          <p><strong>3 Days</strong></p>
-          <p>Validity</p>
-          <br><br>
-          <div class="price-box">
-            <p class="price">₹99</p>
-          </div>
-        </div>
+<!-- Checkout Modal -->
+<div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="checkoutModalLabel">Customer Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-
-      <!-- Box 3 -->
-      <div class="col-lg-3 col-md-4 col-sm-6 col-4 payButton">
-        <div class="box">
-          <p><strong>7 Days</strong></p>
-          <p>Validity</p>
-          <br><br>
-          <div class="price-box">
-            <p class="price">₹199</p>
+      <div class="modal-body">
+        <form id="checkoutForm">
+          <div class="mb-3">
+            <label for="customerName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="customerName" required>
           </div>
-        </div>
-      </div>
-
-      <!-- Box 4 (Popular) -->
-      <div class="col-lg-3 col-md-4 col-sm-6 col-4 payButton">
-        <div class="box">
-          <p><strong>30 Days</strong></p>
-          <p>Validity</p>
-          <br><br>
-          <div class="price-box">
-            <p class="price">₹499</p>
+          <div class="mb-3">
+            <label for="customerPhone" class="form-label">Phone</label>
+            <input type="tel" class="form-control" id="customerPhone" required>
           </div>
-        </div>
-      </div>
-
-      <!-- Box 5 -->
-      <div class="col-lg-3 col-md-4 col-sm-6 col-4 payButton">
-        <div class="box">
-          <p><strong>3 Month</strong></p>
-          <p>Validity</p>
-          <br><br>
-          <div class="price-box">
-            <p class="price">₹999</p>
+          <div class="mb-3">
+            <label for="customerAddress" class="form-label">Address</label>
+            <textarea class="form-control" id="customerAddress" rows="3" required></textarea>
           </div>
-        </div>
+          <button type="submit" class="btn btn-success w-100">Confirm Order</button>
+        </form>
       </div>
-
     </div>
   </div>
+</div>
 
-
-    <!-- Stats Section -->
-    <section id="stats" class="stats section light-background">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="bi bi-emoji-smile"></i>
-            <div class="stats-item">
-              <span data-purecounter-start="8500" data-purecounter-end="10000" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Users</p>
+<section id="products" class="section">
+  <div class="container py-5">
+    <div class="row g-4">
+      <!-- Salad 1 -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="box text-center">
+          <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/greek_salad_16407_16x9.jpg" alt="Greek Salad" class="img-fluid mb-3 rounded" style="height: 180px; object-fit: cover;">
+          <p><strong>Greek Salad Bowl</strong></p>
+          <p>Fresh cucumber, olives & feta cheese</p>
+          <div class="price-box">
+            <p class="price">₹149</p>
+            <div class="mt-3">
+              <button class="btn btn-success btn-sm checkout-btn" data-bs-toggle="modal" data-bs-target="#checkoutModal">Proceed to Checkout</button>
             </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="bi bi-journal-richtext"></i>
-            <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="500" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Active users</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="bi bi-headset"></i>
-            <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hours Of Support</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="bi bi-people"></i>
-            <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hard Workers</p>
-            </div>
-          </div><!-- End Stats Item -->
-
+          </div>
         </div>
-
       </div>
 
-    </section><!-- /Stats Section -->
-
-    <!-- Details Section -->
-    <section id="about" class="about section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Details</h2>
-        <div><span>Check Our</span> <span class="description-title">Details</span></div>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4 align-items-center features-item">
-          <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
-            <img src="assets/img/details-1.png" class="img-fluid" alt="">
+      <!-- Salad 2 -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="box text-center">
+          <img src="https://www.umami.recipes/api/image/recipes/tjOMQnZcggP4YqzEwXXG/images/Y56oKIwhaIqAPWLHuXk58L?w=3840&q=75" alt="Quinoa Salad" class="img-fluid mb-3 rounded" style="height: 180px; object-fit: cover;">
+          <p><strong>Quinoa Power Salad</strong></p>
+          <p>Protein-packed with veggies & seeds</p>
+          <div class="price-box">
+            <p class="price">₹179</p>
+            <div class="mt-3">
+              <button class="btn btn-success btn-sm checkout-btn" data-bs-toggle="modal" data-bs-target="#checkoutModal">Proceed to Checkout</button>
+            </div>
           </div>
-          <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
-            <h3>Hi ma is a dynamic platform designed to help experts connect, share knowledge, and build community</h3>
-            <p class="fst-italic">
-              With interest-based networking, virtual events, and expert-led discussions, Hi ma fosters insightful conversations and collaboration.
-            </p>
-            <ul>
-              <li><i class="bi bi-check"></i><span> live Q&A sessions, panel discussions, and mentorship opportunities,</span></li>
-              <li><i class="bi bi-check"></i> <span>high-quality community with strict moderation and professional standards,</span></li>
-              
-            </ul>
-          </div>
-        </div><!-- Features Item -->
-
-
-
-      </div>
-
-    </section><!-- /Details Section -->
-
-
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <div><span>Check Our</span> <span class="description-title">Contact</span></div>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4">
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-              <i class="bi bi-geo-alt flex-shrink-0"></i>
-              <div>
-                <h3>Address</h3>
-                <p>No. 3 Ragavendra garden , Thiruvanai Kovil , Trichy, LPG Auto Gas Opposite Road
-                  Tiruchirappalli - 620005 
-                  Tamil Nadu, India</p>
-              </div>
-            </div><!-- End Info Item -->
-
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-telephone flex-shrink-0"></i>
-              <div>
-                <h3>Call Us</h3>
-                <p>+91 89395 80642</p>
-              </div>
-            </div><!-- End Info Item -->
-
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-envelope flex-shrink-0"></i>
-              <div>
-                <h3>Email Us</h3>
-                <p>himaapp123@gmail.com</p>
-              </div>
-            </div><!-- End Info Item -->
-
-          </div>
-
-          <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
-            </form>
-          </div><!-- End Contact Form -->
-
         </div>
-
       </div>
 
-    </section><!-- /Contact Section -->
+      <!-- Salad 3 -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="box text-center">
+          <img src="https://joyfoodsunshine.com/wp-content/uploads/2022/05/summer-fruit-salad-recipe-1.jpg" alt="Fruit Salad" class="img-fluid mb-3 rounded" style="height: 180px; object-fit: cover;">
+          <p><strong>Fresh Fruit Salad</strong></p>
+          <p>Chilled mix of seasonal organic fruits</p>
+          <div class="price-box">
+            <p class="price">₹129</p>
+            <div class="mt-3">
+              <button class="btn btn-success btn-sm checkout-btn" data-bs-toggle="modal" data-bs-target="#checkoutModal">Proceed to Checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
   </main>
 
-  <footer id="footer" class="footer dark-background">
-
-
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Hi ma</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by Hima</a>
-      </div>
-    </div>
-
+  <footer id="footer" class="footer text-center py-4">
+    <p>© 2025 <strong>Organic Agri</strong>. All Rights Reserved.</p>
+    <p>Powered by HiDude.in</p>
   </footer>
 
-  <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-  <script>
-    document.querySelectorAll('.payButton').forEach(button => {
-        button.addEventListener('click', function () {
-            let priceText = this.querySelector('.gold-price, .price').innerText.replace('₹', '').trim();
-            let amountInPaisa = parseInt(priceText) * 100; // Convert ₹ to paise
-
-            var options = {
-                "key": "rzp_live_3zt6jpOxJUSrfO", // Replace with your Razorpay API Key
-                "amount": amountInPaisa, 
-                "currency": "INR",
-                "name": "Hi ma",
-                "description": "Subscription Payment",
-                "image": "assets/img/logo.png",
-                "handler": function (response) {
-                    alert("Payment Successful! Payment ID: " + response.razorpay_payment_id);
-                },
-                "prefill": {
-                    "name": "Jaya Prasad",
-                    "email": "himaapp123@gmail.com",
-                    "contact": "8939580642"
-                },
-                "theme": {
-                    "color": "#FFC107"
-                }
-            };
-            var rzp1 = new Razorpay(options);
-            rzp1.open();
-        });
-    });
-</script>
-
-  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+  <script>
+    document.querySelectorAll('.payButton').forEach((card) => {
+      const minusBtn = card.querySelector('button:nth-of-type(1)');
+      const qtySpan = card.querySelector('span');
+      const plusBtn = card.querySelector('button:nth-of-type(2)');
+  
+      let qty = 1;
+  
+      plusBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        qty++;
+        qtySpan.textContent = qty;
+      });
+  
+      minusBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        if (qty > 1) qty--;
+        qtySpan.textContent = qty;
+      });
+  
+    });
+  </script>
+  
 </body>
 
 </html>
