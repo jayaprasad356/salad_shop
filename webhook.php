@@ -20,7 +20,7 @@ if (
     $coins_id = isset($parts[1]) ? $parts[1] : null;
 
     if ($user_id && $coins_id) {
-        $api_url = 'https://himaapp.in/api/auth/add_coins';
+        $api_url = 'https://himaapp.in/api/razorpay_add_coins';
 
         $post_data = [
             'user_id' => $user_id,
